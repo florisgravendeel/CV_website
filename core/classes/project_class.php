@@ -60,16 +60,17 @@
         /*----------------------------------------------------
         * met deze functie voegen we een nieuw project toe
         -----------------------------------------------------*/
-        public function toevoegen_project($titel, $beschrijving, $date, $img)
+        public function toevoegen_project($titel, $kort_beschrijving, $lang_beschrijving, $date, $img)
         {
             $query = $this->db->prepare(
                 "INSERT INTO projects 
-		  (title, description, date, img) VALUES (?,?,?,?) ");
+		  (title, short_description, long_description, date, img) VALUES (?,?,?,?,?) ");
 
             $query->bindValue(1, $titel);
-            $query->bindValue(2, $beschrijving);
-            $query->bindValue(3, $date);
-            $query->bindValue(4, $img);
+            $query->bindValue(2, $kort_beschrijving);
+            $query->bindValue(3, $lang_beschrijving);
+            $query->bindValue(4, $date);
+            $query->bindValue(5, $img);
 
             try {
                 $query->execute();
@@ -82,22 +83,24 @@
         /*----------------------------------------------------
          * met deze functie kunnen we een project wijzigen
          -----------------------------------------------------*/
-        public function wijzigen_project($titel, $beschrijving, $date, $img, $id)
+        public function wijzigen_project($titel, $kort_beschrijving, $lang_beschrijving, $date, $img, $id)
         {
             $query = $this->db->prepare(
                 "UPDATE project SET 
 		  title = ?,
-		  description = ?,
+		  short_description = ?,
+		  long_description = ?,
 		  date = ?,
           img = ?
 		  WHERE id = ?"
             );
 
             $query->bindValue(1, $titel);
-            $query->bindValue(2, $beschrijving);
-            $query->bindValue(3, $date);
-            $query->bindValue(4, $img);
-            $query->bindValue(5, $id);
+            $query->bindValue(2, $kort_beschrijving);
+            $query->bindValue(3, $lang_beschrijving);
+            $query->bindValue(4, $date);
+            $query->bindValue(5, $img);
+            $query->bindValue(6, $id);
 
             try {
                 $query->execute();

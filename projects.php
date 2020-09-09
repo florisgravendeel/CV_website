@@ -25,12 +25,14 @@
     }
 
     $titel = array();
-    $beschrijving = array();
+    $kort_beschrijving = array();
+    $lang_beschrijving = array();
     $datum = array();
     $afbeelding = array();
     foreach($projecten as $project){
         array_push($titel,$project['title']);
-        array_push($beschrijving,$project['description']);
+        array_push($kort_beschrijving,$project['short_description']);
+        array_push($lang_beschrijving,$project['long_description']);
         array_push($datum,$project['date']);
         array_push($afbeelding,$project['img']);
     }
@@ -39,7 +41,8 @@
     var aantalProjecten = <?php echo json_encode($aantal_projecten); ?>;
 
     var titel = <?php echo json_encode($titel); ?>;
-    var beschrijving = <?php echo json_encode($beschrijving); ?>;
+    var kort_beschrijving = <?php echo json_encode($kort_beschrijving); ?>;
+    var lang_beschrijving = <?php echo json_encode($lang_beschrijving); ?>;
     var datum = <?php echo json_encode($datum); ?>;
     var afbeelding = <?php echo json_encode($afbeelding); ?>
 
@@ -47,11 +50,13 @@
     for (i = 0; i < (aantalProjecten); i++){
             var project = {
             titel: titel[i],
-            beschrijving: beschrijving[i],
+            korte_beschrijving: kort_beschrijving[i],
+            lange_beschrijving: lang_beschrijving[i],
             datum: datum[i],
             afbeelding: afbeelding[i]
         };
         projecten.push(project);
+
     }
 
             function bouwProjectLijst() {
@@ -67,7 +72,8 @@
 						
 						<div class="slide">
 							<div class="project"> ${huidigProject.titel} </div>
-							<p>${huidigProject.beschrijving}</p>
+                            <p>${huidigProject.korte_beschrijving}</p>
+							<p>${huidigProject.lange_beschrijving}</p>
                             <p>${huidigProject.datum}</p>
 						</div>`
                     );
