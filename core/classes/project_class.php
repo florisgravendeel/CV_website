@@ -86,7 +86,7 @@
         public function wijzigen_project($titel, $kort_beschrijving, $lang_beschrijving, $date, $img, $id)
         {
             $query = $this->db->prepare(
-                "UPDATE project SET 
+                "UPDATE projects SET 
 		  title = ?,
 		  short_description = ?,
 		  long_description = ?,
