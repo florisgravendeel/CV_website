@@ -60,17 +60,19 @@
         /*----------------------------------------------------
         * met deze functie voegen we een nieuw project toe
         -----------------------------------------------------*/
-        public function toevoegen_project($titel, $kort_beschrijving, $lang_beschrijving, $date, $img)
+        public function toevoegen_project($titel, $kort_beschrijving, $lang_beschrijving, $date, $img, $madewith, $link)
         {
             $query = $this->db->prepare(
                 "INSERT INTO projects 
-		  (title, short_description, long_description, date, img) VALUES (?,?,?,?,?) ");
+		  (title, short_description, long_description, date, img) VALUES (?,?,?,?,?,?,?) ");
 
             $query->bindValue(1, $titel);
             $query->bindValue(2, $kort_beschrijving);
             $query->bindValue(3, $lang_beschrijving);
             $query->bindValue(4, $date);
             $query->bindValue(5, $img);
+            $query->bindValue(6, $madewith);
+            $query->bindValue(7, $link);
 
             try {
                 $query->execute();
@@ -83,7 +85,7 @@
         /*----------------------------------------------------
          * met deze functie kunnen we een project wijzigen
          -----------------------------------------------------*/
-        public function wijzigen_project($titel, $kort_beschrijving, $lang_beschrijving, $date, $img, $id)
+        public function wijzigen_project($titel, $kort_beschrijving, $lang_beschrijving, $date, $img, $id, $madewith, $link)
         {
             $query = $this->db->prepare(
                 "UPDATE projects SET 
@@ -91,7 +93,9 @@
 		  short_description = ?,
 		  long_description = ?,
 		  date = ?,
-          img = ?
+          img = ?,
+          madewith = ?,
+          link = ?
 		  WHERE id = ?"
             );
 
@@ -100,7 +104,9 @@
             $query->bindValue(3, $lang_beschrijving);
             $query->bindValue(4, $date);
             $query->bindValue(5, $img);
-            $query->bindValue(6, $id);
+            $query->bindValue(6, $madewith);
+            $query->bindValue(7, $link);
+            $query->bindValue(8, $id);
 
             try {
                 $query->execute();

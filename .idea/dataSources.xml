@@ -10,5 +10,14 @@
         <property name="serverTimezone" value="Europe/Amsterdam" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="Microsoft Azure" uuid="deeec2b2-512a-4a09-875c-8e9a6bc0de88">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://florisg-website.mysql.database.azure.com:3306</jdbc-url>
+      <driver-properties>
+        <property name="serverTimezone" value="UTC" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

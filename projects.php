@@ -12,7 +12,7 @@
 <h1>Projects</h1>
 <p>Dit zijn al mijn projecten.</p>
     <ol><li><a href="projects.php">Projects</a></li>
-        <li><a href="aboutme.php">Over Mij</a>
+        <li><a href="blog.php">Over Mij</a>
     <li>Contact</li>
     </ol>
     <div id="projectlijst"></div>
@@ -29,12 +29,16 @@
     $lang_beschrijving = array();
     $datum = array();
     $afbeelding = array();
+    $programmeertaal = array();
+    $link = array();
     foreach($projecten as $project){
         array_push($titel,$project['title']);
         array_push($kort_beschrijving,$project['short_description']);
         array_push($lang_beschrijving,$project['long_description']);
         array_push($datum,$project['date']);
         array_push($afbeelding,$project['img']);
+        array_push($programmeertaal,$project['madewith']);
+        array_push($link,$project['link']);
     }
     ?>
     <script> //Alle data van PHP naar Javascript omzetten.
@@ -44,7 +48,10 @@
     var kort_beschrijving = <?php echo json_encode($kort_beschrijving); ?>;
     var lang_beschrijving = <?php echo json_encode($lang_beschrijving); ?>;
     var datum = <?php echo json_encode($datum); ?>;
-    var afbeelding = <?php echo json_encode($afbeelding); ?>
+
+    var afbeelding = <?php echo json_encode($afbeelding); ?>;
+    var programmeertaal = <?php echo json_encode($programmeertaal); ?>;
+    var link = <?php echo json_encode($link); ?>;
 
     var projecten = [];
     for (i = 0; i < (aantalProjecten); i++){
@@ -53,7 +60,9 @@
             korte_beschrijving: kort_beschrijving[i],
             lange_beschrijving: lang_beschrijving[i],
             datum: datum[i],
-            afbeelding: afbeelding[i]
+            afbeelding: afbeelding[i],
+            programeertaal: programmeertaal[i],
+            link: link[i]
         };
         projecten.push(project);
 
@@ -75,6 +84,7 @@
                             <p>${huidigProject.korte_beschrijving}</p>
 							<p>${huidigProject.lange_beschrijving}</p>
                             <p>${huidigProject.datum}</p>
+                            <p>${huidigProject.programeertaal}</p>
 						</div>`
                     );
                 });
