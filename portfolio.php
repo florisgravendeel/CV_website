@@ -75,17 +75,17 @@ require 'core/init.php';
 
                     var projecten = [];
                     for (i = 0; i < (aantalProjecten); i++){
+                        var date = new Date(datum[i]);
                         var project = {
                             titel: titel[i],
                             korte_beschrijving: kort_beschrijving[i],
                             lange_beschrijving: lang_beschrijving[i],
-                            datum: datum[i],
+                            datum: date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear(),
                             afbeelding: afbeelding[i],
                             programeertaal: programmeertaal[i],
                             link: link[i]
                         };
                         projecten.push(project);
-
                     }
                     function bouwProjectLijst() {
                         // We hebben een plek nodig om alle HTML output in op te slaan
@@ -100,7 +100,7 @@ require 'core/init.php';
                             <h1 class="card-title">${huidigProject.titel}</h1>
                             <p class="card-date">${huidigProject.datum}</p>
                             <p class="card-description">${huidigProject.korte_beschrijving}<br></p>
-                            <button class="btn btn-primary card-button" type="button" >MEER INFO</button>
+                            <button class="btn btn-primary card-button" type="button" onclick="window.location.href='${huidigProject.link}';">MEER INFO</button>
                             <p class="card-madewith">${huidigProject.programeertaal}</p>
                             </div>
                         </div>
@@ -117,6 +117,9 @@ require 'core/init.php';
                             var background = "url(assets/img/" + projecten[i].afbeelding + ")";
                             //alert(background);
                             document.getElementById(id).style.backgroundImage = background;
+                        }
+                        if (aantalProjecten >= 3){
+                            //document.getElementById("jumbotron2").style.height = "1100px"; //MAX WIDTH
                         }
                     }
                     const projectContainer = document.getElementById("projectsContainer");
