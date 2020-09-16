@@ -29,11 +29,11 @@
 }
 
 #jumbotron1 {
-  background: url(../../assets/img/background1.png) no-repeat;
+  background: url(assets/img/background1.png) no-repeat;
 }
 
 #jumbotron2 {
-  background: url(../../assets/img/background3.png) no-repeat;
+  background: url("assets/img/background3.png") no-repeat;
   background-size: cover;
   color: aliceblue;
   background-position: left center;
@@ -122,7 +122,7 @@
     margin-bottom: auto;
     outline: solid;
     outline-color: #1a252f;
-    background: url(../../assets/img/background1.png) no-repeat;
+    background: url(background1.png) no-repeat;
     background-position: right center;
   }
 }
@@ -266,6 +266,12 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  #jumbotron2 {
+    height: 900px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
   #headline {
     font-size: 44px;
     margin-bottom: 30px;
@@ -395,4 +401,3 @@
     margin-top: 35px;
   }
 }
-

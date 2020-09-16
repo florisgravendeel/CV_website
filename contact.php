@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/Footer-Basic.css">
     <link rel="stylesheet" href="assets/css/ProjectList.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -28,11 +29,16 @@
         </div>
     </nav>
     <div id="heading"></div>
-    <div class="jumbotron" id="jumbotron1">
+    <div class="jumbotron" id="jumbotron3">
         <div id="Header">
-            <h1 id="headline">Hoi, mijn naam is Floris Gravendeel.<br></h1>
-            <p class="text-left" id="textmidden">Ik ben Young IT Professional en 1e jaars student aan de <strong>Hogeschool Utrecht</strong>. Momenteel woon ik in Hilversum en studeer ik&nbsp;<em>HBO-ICT</em>&nbsp;voltijd.&nbsp;<br><br>Mijn vaardigheden zijn ondere andere Java, HTML, JS,
-                CSS, PHP en Swift.&nbsp;<br></p><img id="profilepicture" src="assets/img/profile.jpg"></div>
+            <form method="post">
+                <h2 class="text-center" id="contactme">Contact opnemen</h2>
+                <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Naam"></div>
+                <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Voer een correct email-adres in!</small></div>
+                <div class="form-group"><textarea class="form-control" id="form-message" name="message" placeholder="Bericht" rows="14"></textarea></div>
+                <div class="form-group"><button class="btn btn-primary" type="submit">Verstuur</button></div>
+            </form>
+        </div>
     </div>
     <div id="footer" class="footer-basic">
         <footer>

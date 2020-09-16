@@ -25,7 +25,7 @@ require 'core/init.php';
                     <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="index.php">Homepagina</a></li>
                     <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="portfolio.php">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="contact.php">Contact</a></li>
                 </ul>
         </div>
         </div>
@@ -111,31 +111,36 @@ require 'core/init.php';
                         projectContainer.innerHTML = output.join("");
                     }
                     // Voegt afbeeldingen toe aan de projecten.
-                    function styleProjectLijst(){
-                        for (i = 0; i < aantalProjecten; i++){
+                    function styleProjectLijst() {
+                        for (i = 0; i < aantalProjecten; i++) {
                             var id = "card-body" + i;
                             var background = "url(assets/img/" + projecten[i].afbeelding + ")";
-                            //alert(background);
                             document.getElementById(id).style.backgroundImage = background;
-                        }
-                        if (aantalProjecten >= 3){
-                            //document.getElementById("jumbotron2").style.height = "1100px"; //MAX WIDTH
                         }
                     }
                     const projectContainer = document.getElementById("projectsContainer");
                     bouwProjectLijst();
                     styleProjectLijst();
-                </script>
-                <!--<div class="col-md-6 col-lg-4">
-                    <div id="card-body1" class="card-body">
-                        <h1 class="card-title">Cryptocurrencies</h1>
-                        <p class="card-date">21/06/2020</p>
-                        <p class="card-description">Hoe werken digitale munten zoals de Bitcoin?<br></p><button class="btn btn-primary card-button" type="button">MEER INFO</button>
-                        <p class="card-madewith">profielwerkstuk</p>
-                    </div>
-                </div>
+                        /**Gezien het aantal projecten kan verschillen, moet je rekening houden met de hoogte van de pagina.
+                        if (aantalProjecten <= 3) {
+                            var media_query1 = 'screen and (min-width:992px) and (max-width:1199.98px)';
+                            //event to watch the media query
+                            window.matchMedia(media_query1).addEventListener('change', function() {
+                                let matched = this.matches;
+                                if(matched) {
+                                    document.getElementById("jumbotron2").style.height = "900px";
+                                }
+                            });
+                            var media_query = 'screen and (min-width: 1200px)';
+                            // event to watch the media query
+                            window.matchMedia(media_query).addEventListener('change', function() {
+                                let matched = this.matches;
+                                if(matched) {
+                                    document.getElementById("jumbotron2").style.height = "1100px";
+                                }
+                            });
                 <div class="col-md-6 col-lg-4">
-                    <div class="card-body">
+                    <div class="card-body" id="fake-card1">
                         <h1 class="card-title">Weekend Miljonairs!<br></h1>
                         <p class="card-date">18/06/2019</p>
                         <p class="card-description">Test je kennis met deze leuke quiz!<br></p><button class="btn btn-primary card-button" type="button">MEER INFO</button>
@@ -149,7 +154,9 @@ require 'core/init.php';
                         <p class="card-description">Een geavanceerde spigot-plugin voor Minecraft.<br></p><button class="btn btn-primary card-button" type="button">MEER INFO</button>
                         <p class="card-madewith">JAVA</p>
                     </div>
-                </div>-->
+                </div>
+                        }*/
+                </script>
             </div>
         </div>
     </div>
