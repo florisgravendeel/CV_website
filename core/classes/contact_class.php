@@ -60,16 +60,15 @@
         /*----------------------------------------------------
         * met deze functie voegen we een nieuw contact toe
         -----------------------------------------------------*/
-        public function toevoegen_contact($naam, $email, $bericht, $datum)
+        public function toevoegen_contact($naam, $email, $bericht)
         {
             $query = $this->db->prepare(
                 "INSERT INTO contactlist 
-		  (name, email, message, date) VALUES (?,?,?,?) ");
+		  (name, email, message, date) VALUES (?,?,?,now()) ");
 
             $query->bindValue(1, $naam);
             $query->bindValue(2, $email);
             $query->bindValue(3, $bericht);
-            $query->bindValue(4, $datum);
 
             try {
                 $query->execute();

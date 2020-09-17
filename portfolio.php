@@ -3,29 +3,31 @@ require 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Portfolio</title>
+    <title>FG - Portfolio</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
-    <link rel="stylesheet" href="assets/css/ProjectList.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/jumbotron.css">
+    <link rel="stylesheet" href="assets/css/navigation-bar.css">
+    <link rel="stylesheet" href="assets/css/projectlist.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="text-white-50">
-    <nav class="navbar navbar-light navbar-expand-md" id="navbar">
-        <div class="container-fluid"><a class="navbar-brand" href="#"><img id="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+<body>
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="#"><img class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="height: 33px;text-align: left;">
-                <ul class="nav navbar-nav mx-auto" id="navbarmenu">
-                    <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="index.php">Homepagina</a></li>
-                    <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="portfolio.php">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link active" id="navmenubar1" href="contact.php">Contact</a></li>
+                <ul class="nav navbar-nav mx-auto navigation-bar">
+                    <li class="nav-item"><a class="nav-link active navigation-links" href="index.php">Homepagina</a></li>
+                    <li class="nav-item"><a class="nav-link active navigation-links" href="portfolio.php">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link active navigation-links" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active navigation-links" href="contact.php">Contact</a></li>
                 </ul>
         </div>
         </div>
@@ -54,13 +56,12 @@ require 'core/init.php';
         array_push($link,$project['link']);
     }
     ?>
-    <div id="heading"></div>
-    <div class="jumbotron" id="jumbotron2">
+    <div class="jumbotron jumbotron-portfolio">
         <div class="container">
-            <div id="heading" class="heading">
+            <div class="portfolio-title">
                 <h2>Portfolio</h2>
             </div>
-            <div class="row" id="projectsContainer">
+                <div class="row" id="projectsContainer">
                 <script> //Alle data van PHP naar Javascript omzetten.
                     var aantalProjecten = <?php echo json_encode($aantal_projecten); ?>;
 
@@ -121,50 +122,16 @@ require 'core/init.php';
                     const projectContainer = document.getElementById("projectsContainer");
                     bouwProjectLijst();
                     styleProjectLijst();
-                        /**Gezien het aantal projecten kan verschillen, moet je rekening houden met de hoogte van de pagina.
-                        if (aantalProjecten <= 3) {
-                            var media_query1 = 'screen and (min-width:992px) and (max-width:1199.98px)';
-                            //event to watch the media query
-                            window.matchMedia(media_query1).addEventListener('change', function() {
-                                let matched = this.matches;
-                                if(matched) {
-                                    document.getElementById("jumbotron2").style.height = "900px";
-                                }
-                            });
-                            var media_query = 'screen and (min-width: 1200px)';
-                            // event to watch the media query
-                            window.matchMedia(media_query).addEventListener('change', function() {
-                                let matched = this.matches;
-                                if(matched) {
-                                    document.getElementById("jumbotron2").style.height = "1100px";
-                                }
-                            });
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-body" id="fake-card1">
-                        <h1 class="card-title">Weekend Miljonairs!<br></h1>
-                        <p class="card-date">18/06/2019</p>
-                        <p class="card-description">Test je kennis met deze leuke quiz!<br></p><button class="btn btn-primary card-button" type="button">MEER INFO</button>
-                        <p class="card-madewith">PHP</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="card-body">
-                        <h1 class="card-title">Iceball<br></h1>
-                        <p class="card-date">21/06/2020</p>
-                        <p class="card-description">Een geavanceerde spigot-plugin voor Minecraft.<br></p><button class="btn btn-primary card-button" type="button">MEER INFO</button>
-                        <p class="card-madewith">JAVA</p>
-                    </div>
-                </div>
-                        }*/
                 </script>
             </div>
-        </div>
+                </div>
+            </div>
     </div>
-    <div id="footer" class="footer-basic">
+    <div class="footer-basic">
         <footer>
-            <div class="social"><a id="githubicon" href="https://github.com/florisgravendeel/"><i class="icon ion-social-github"></i></a><a id="facebookicon" href="https://facebook.com/florisgravendeel"><i class="icon ion-social-facebook"></i></a><a href="https://www.instagram.com/floris.gravendeel/"><i class="icon ion-social-instagram"></i></a></div>
+            <div class="social"><a id="githubicon" href="https://github.com/florisgravendeel/"><i class="icon ion-social-github"></i></a><a id="facebookicon" href="https://facebook.com/florisgravendeel"><i class="icon ion-social-facebook"></i></a><a id="instagramicon" href="https://www.instagram.com/floris.gravendeel/"><i class="icon ion-social-instagram"></i></a></div>
             <p
-                id="copyrightp" class="copyright">Floris Gravendeel © 2020</p>
+                class="copyright">Floris Gravendeel © 2020</p>
         </footer>
     </div>
     <script src="assets/js/jquery.min.js"></script>

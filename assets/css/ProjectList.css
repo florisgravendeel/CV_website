@@ -1,5 +1,6 @@
-#heading {
+.portfolio-title {
   text-align: center;
+  color: aliceblue;
 }
 
 .card-body {
@@ -18,7 +19,12 @@
   background-repeat: no-repeat;
   background-size: 150px, 150px;
   background-position: center;
+  color: aliceblue;
   position: relative;
+}
+
+#card-body1 {
+  background-image: url("../../assets/img/server-icon.png");
 }
 
 .card-body:hover {
@@ -86,3 +92,4 @@
   border-color: black;
   box-shadow: 0 0 0 .2rem rgba(0, 0, 0, 0.5);
 }
+

@@ -1,0 +1,6 @@
+"id";"title";"short_description";"long_description";"date";"img";"madewith";"link"
+1;"Cryptocurrency ";"Hoe werken digitale munten zoals de Bitcoin?
+ ";"Toen Floris in havo-5 had hij met 3 andere klasgenoten ervoor gekozen om een profielwerkstuk te schrijven over cryptocurrencies, oftewel digitale munten zoals de Bitcoin. Dit was een groot succes en heeft daarom het werkstuk afgerond met een 8!   ";"2017-11-27";"bitcoinlogo.png";"Profielwerkstuk";"https://www.google.nl/"
+2;"Weekend Miljonairs!";"Test je kennis met deze leuke quiz!
+";"In het laatste schooljaar kreeg Floris de opdracht om een website te bouwen met een quiz. Deze quiz bestond uit 10 multiple-choice vragen. Het eindcijfer voor deze website was een 9. ";"2019-03-25";"weekendmiljonairs.png";"PHP";"/assets/files/WeekendMiljonairsQuiz.zip"
+3;"Iceball";"Een geavanceerde spigot-plugin voor Minecraft. ";"Floris zijn eerste project bestond uit een minigame-plugin voor minecraft servers. De plugin heet Iceball, wat oorspronkelijk de naam van de server moest zijn. De plugin doet veel verschillende taken zoals het automatisch registreren van spelers, een simpele ingebouwde coinAPI die verbonden kan worden met andere plugins, en een minigameAPI waarmee je minigames kan bouwen voor je vrienden.";"2016-01-31";"server-icon.png";"Java";"https://github.com/florisgravendeel/Iceball"
