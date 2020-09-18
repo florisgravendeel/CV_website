@@ -2,7 +2,7 @@
 	require 'core/init.php';
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 
 <head>
     <meta charset="utf-8">
@@ -18,8 +18,9 @@
       $email = $_GET["w2"];
       $msg = $_GET["w3"];
 
-      $contact->toevoegen_contact($name, $email, $msg);
-
+        if (isset($contact)) {
+            $contact->toevoegen_contact($name, $email, $msg);
+        }
      //Bericht wordt in de de databank gezet.
       header('Location: contact.php');
     }
