@@ -117,6 +117,7 @@ require 'core/init.php';
                             var id = "card-body" + i;
                             var background = "url(assets/img/" + projecten[i].afbeelding + ")";
                             document.getElementById(id).style.backgroundImage = background;
+                            
                         }
                     }
                     const projectContainer = document.getElementById("projectsContainer");
