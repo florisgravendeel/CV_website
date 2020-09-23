@@ -1,0 +1,549 @@
+.jumbotron-header {
+  color: aliceblue;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.jumbotron {
+  margin-bottom: 2rem;
+  background-color: #ecf0f1;
+  background-size: cover;
+  background-position: center;
+  height: 75%;
+  border-radius: 0;
+  margin-bottom: auto;
+  outline: solid;
+  outline-color: #1a252f;
+}
+
+.jumbotron-homepage {
+  background: url(../../assets/img/background1.png) no-repeat;
+}
+
+.jumbotron-body {
+  width: 500px;
+  display: inline-block;
+}
+
+.profilepicture {
+  width: 200px;
+  border-radius: 50%;
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-header {
+    color: aliceblue;
+    width: 300px;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 765px;
+    width: 330px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-header-contact {
+    color: aliceblue;
+    width: 300px;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 565px;
+    width: 330px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-title2 {
+    margin-top: 35px;
+    margin-bottom: -10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-body {
+    width: 300px;
+    height: 75px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .profilepicture {
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+    display: block;
+    margin-top: -14px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-homepage {
+    border-radius: 0;
+    margin-bottom: auto;
+    outline: solid;
+    outline-color: #1a252f;
+    background: url(../../assets/img/background1.png) no-repeat;
+    background-position: right center;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-title {
+    width: 100%;
+    font-size: xx-large;
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-contact-phone {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: 40px;
+    height: 45px;
+    width: 330px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-header {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    height: 760px;
+    width: 490px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-header-contact {
+    background-color: rgba(0,0,0,0.45);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 23px;
+    border-radius: 10px;
+    height: 550px;
+    width: 490px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-title2 {
+    font-size: 22px;
+    margin-top: 14px;
+    margin-bottom: -15px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-body {
+    width: 450px;
+    display: inline-block;
+    color: aliceblue;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .profilepicture {
+    margin-left: auto;
+    margin-right: auto;
+    width: 185px;
+    display: block;
+    margin-top: 0px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-homepage {
+    background-position: right;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-title {
+    width: 100%;
+    margin-bottom: 30px;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-contact-phone {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: 70px;
+    height: 45px;
+    width: 490px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-header {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 660px;
+    width: 645px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-header-contact {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 575px;
+    width: 645px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron {
+    padding: 80px;
+    margin-bottom: 2rem;
+    background-color: #ecf0f1;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-homepage {
+    background-position: right;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-body {
+    width: 600px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .profilepicture {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-title2 {
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: -5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-contact-phone {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: 100px;
+    height: 55px;
+    width: 645px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-title {
+    font-size: 44px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-body {
+    width: 690px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .profilepicture {
+    margin-left: auto;
+    margin-right: auto;
+    width: 208px;
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-homepage {
+    height: 1100px;
+    background-position: right center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-header {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 710px;
+    width: 80%;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-header-contact {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 595px;
+    width: 737px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-title2 {
+    margin-top: 30px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-contact-phone {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: 100px;
+    height: 55px;
+    width: 737px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-header {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: 150px;
+    height: 745px;
+    width: 900px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-header-contact {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: 100px;
+    height: 650px;
+    width: 900px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-contact-phone {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: 100px;
+    height: 55px;
+    width: 900px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-title {
+    font-size: 52px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-body {
+    font-size: 19px;
+    width: 850px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-homepage {
+    height: 1250px;
+    background-position: right;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-title2 {
+    margin-top: 30px;
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .profilepicture {
+    margin-left: auto;
+    margin-right: auto;
+    width: 228px;
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+.jumbotron-portfolio {
+  background: url(../../assets/img/background3.png) no-repeat;
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-portfolio {
+    border-radius: 0;
+    margin-bottom: auto;
+    outline: solid;
+    outline-color: #1a252f;
+    background: url(../../assets/img/background3.png) no-repeat;
+    background-position: right center;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-portfolio {
+    background-position: right;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-portfolio {
+    background-position: right;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-portfolio {
+    height: 1100px;
+    background-position: right center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-portfolio {
+    height: 1250px;
+    background-position: right;
+    background-size: cover;
+  }
+}
+
+.jumbotron-contact {
+  background: url(../../assets/img/background2.png) no-repeat;
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-contact {
+    border-radius: 0;
+    margin-bottom: auto;
+    outline: solid;
+    outline-color: #1a252f;
+    background: url(../../assets/img/background2.png) no-repeat;
+    background-position: center;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-contact {
+    background-position: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-contact {
+    background-position: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-contact {
+    height: 1100px;
+    background-position: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-contact {
+    height: 1250px;
+    background-position: top center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 1200px) {
+  .thisisme {
+    height: 100px;
+    width: auto;
+    margin-top: -200px;
+    margin-left: 540px;
+    position: absolute;
+  }
+}
+
