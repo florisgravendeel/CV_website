@@ -3,19 +3,22 @@ require 'core/init.php';
 ?>
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>FG - Portfolio</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
     <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/contact.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="assets/css/jumbotron.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
     <link rel="stylesheet" href="assets/css/navigation-bar.css">
+    <link rel="stylesheet" href="assets/css/progress-bar.css">
     <link rel="stylesheet" href="assets/css/projectlist.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -26,7 +29,7 @@ require 'core/init.php';
                 <ul class="nav navbar-nav mx-auto navigation-bar">
                     <li class="nav-item"><a class="nav-link active navigation-links" href="index.php">Homepagina</a></li>
                     <li class="nav-item"><a class="nav-link active navigation-links" href="portfolio.php">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link active navigation-links" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active navigation-links" target="_blank" href="pdfview.php?file=CV.pdf">CV</a></li>
                     <li class="nav-item"><a class="nav-link active navigation-links" href="contact.php">Contact</a></li>
                 </ul>
         </div>
@@ -61,7 +64,7 @@ require 'core/init.php';
             <div class="portfolio-title">
                 <h2>Portfolio</h2>
             </div>
-                <div class="row" id="projectsContainer">
+            <div class="row" id="projectsContainer">
                 <script> //Alle data van PHP naar Javascript omzetten.
                     var aantalProjecten = <?php echo json_encode($aantal_projecten); ?>;
 
@@ -101,7 +104,7 @@ require 'core/init.php';
                             <h1 class="card-title">${huidigProject.titel}</h1>
                             <p class="card-date">${huidigProject.datum}</p>
                             <p class="card-description">${huidigProject.korte_beschrijving}<br></p>
-                            <button class="btn btn-primary card-button" type="button" onclick="window.location.href='${huidigProject.link}';">MEER INFO</button>
+                            <button class="btn btn-primary card-button" type="button" data-toggle="modal" data-target="#projectModal" onclick="configureModal(${projectNummer})">MEER INFO</button>
                             <p class="card-madewith">${huidigProject.programeertaal}</p>
                             </div>
                         </div>
@@ -117,17 +120,33 @@ require 'core/init.php';
                             var id = "card-body" + i;
                             var background = "url(assets/img/" + projecten[i].afbeelding + ")";
                             document.getElementById(id).style.backgroundImage = background;
-                            
+
                         }
                     }
                     const projectContainer = document.getElementById("projectsContainer");
                     bouwProjectLijst();
                     styleProjectLijst();
                 </script>
-            </div>
+                <div class="col-md-6 col-lg-4">
+                    <div id="card-body1" class="card-body">
+                        <h1 class="card-title">Cryptocurrencies</h1>
+                        <p class="card-date">21/06/2020</p>
+                        <p class="card-description">Hoe werken digitale munten zoals de Bitcoin?<br></p><button class="btn btn-primary card-button" data-toggle="modal" data-target="#projectModal" type="button" onclick="configureModal(2)">MEER INFO</button>
+                        <p class="card-madewith">profielwerkstuk</p>
+                    </div>
                 </div>
             </div>
+        </div>
     </div>
+    <script>
+        function configureModal(projectNumber) {
+            document.getElementById("projectModalLabel").innerHTML = projecten[projectNumber].titel;
+            document.getElementById("modal-body-text").innerHTML = projecten[projectNumber].lange_beschrijving;
+            document.getElementById("btn-modal").onclick = function() {
+                window.open(projecten[projectNumber].link);
+            };
+        }
+    </script>
     <div class="footer-basic">
         <footer>
             <div class="social"><a id="githubicon" href="https://github.com/florisgravendeel/"><i class="icon ion-social-github"></i></a><a id="facebookicon" href="https://facebook.com/florisgravendeel"><i class="icon ion-social-facebook"></i></a><a id="instagramicon" href="https://www.instagram.com/floris.gravendeel/"><i class="icon ion-social-instagram"></i></a></div>
@@ -135,8 +154,29 @@ require 'core/init.php';
                 class="copyright">Floris Gravendeel © 2020</p>
         </footer>
     </div>
+<!-- Modal -->
+<div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Iceball</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div id="modal-body-text"> </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">SLUIT</button>
+        <button type="button" class="btn btn-primary" id="btn-modal">BEKIJK</button>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/--mp--Animated-progress-bar-in-viewport-1.js"></script>
+    <script src="assets/js/--mp--Animated-progress-bar-in-viewport.js"></script>
 </body>
 
 </html>

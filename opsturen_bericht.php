@@ -6,7 +6,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bericht sturen..</title>
+    <title>Bericht versturen..</title>
 </head>
 
 <body>
