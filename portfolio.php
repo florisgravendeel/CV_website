@@ -127,14 +127,14 @@ require 'core/init.php';
                     bouwProjectLijst();
                     styleProjectLijst();
                 </script>
-                <div class="col-md-6 col-lg-4">
+                <!--<div class="col-md-6 col-lg-4">
                     <div id="card-body1" class="card-body">
                         <h1 class="card-title">Cryptocurrencies</h1>
                         <p class="card-date">21/06/2020</p>
                         <p class="card-description">Hoe werken digitale munten zoals de Bitcoin?<br></p><button class="btn btn-primary card-button" data-toggle="modal" data-target="#projectModal" type="button" onclick="configureModal(2)">MEER INFO</button>
                         <p class="card-madewith">profielwerkstuk</p>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
     </div>

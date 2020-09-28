@@ -57,37 +57,37 @@ require 'core/init.php';
             <div class="col-md-6 column-lang">
                 <h1 class="languagetitle">JAVA</h1>
                 <div class="progress languagebar">
-                    <div class="progress-bar bg-info" style="width:92%;"></div>
+                    <div class="progress-bar bg-info" id="progress-bar1" style="width:0%;"></div>
                 </div>
             </div>
             <div class="col-md-6 column-lang">
                 <h1 class="languagetitle">CSS3</h1>
                 <div class="progress languagebar">
-                    <div class="progress-bar bg-info" style="width: 35%;"></div>
+                    <div class="progress-bar bg-info" id="progress-bar2" style="width: 0%;"></div>
                 </div>
             </div>
             <div class="col-md-6 column-lang">
                 <h1 class="languagetitle">SQL</h1>
                 <div class="progress languagebar">
-                    <div class="progress-bar bg-info" style="width: 80%;"></div>
+                    <div class="progress-bar bg-info" id="progress-bar3" style="width: 0%;"></div>
                 </div>
             </div>
             <div class="col-md-6 column-lang">
                 <h1 class="languagetitle">PHP</h1>
                 <div class="progress languagebar">
-                    <div class="progress-bar bg-info" style="width:20%;"></div>
+                    <div class="progress-bar bg-info" id="progress-bar4" style="width:0%;"></div>
                 </div>
             </div>
             <div class="col-md-6 column-lang">
                 <h1 class="languagetitle">HTML5</h1>
                 <div class="progress languagebar">
-                    <div class="progress-bar bg-info" style="width:60%;"></div>
+                    <div class="progress-bar bg-info" id="progress-bar5" style="width:0%;"></div>
                 </div>
             </div>
             <div class="col-md-6 column-lang">
                 <h1 class="languagetitle">JAVASCRIPT</h1>
                 <div class="progress languagebar">
-                    <div class="progress-bar bg-info" style="width:42%;"></div>
+                    <div class="progress-bar bg-info" id="progress-bar6" style="width:0%;"></div>
                 </div>
             </div>
         </div>
@@ -97,22 +97,36 @@ require 'core/init.php';
                     const typewriter1 = new Typewriter('#WelcomeText');
 
                     typewriter1.typeString('Welkom!')
-                        .callFunction(() => {
-                            console.log('String typed out!');
-
-                        })
                         .pauseFor(4500)
                         .changeCursor(' ')
-                        .pauseFor(500)
-
-                        .callFunction(() => {
-                            console.log('All strings were deleted');
-                        })
                         .start();
-                </script>
-                <script>
-                    function setProgressBar(i) {
 
+                    for (let i=0; i<=1000; i++) {
+                        animate(i);
+                    }
+                    function animate(i) {
+                        setTimeout(function() {
+                            // Add tasks to do
+                            setPercentageProgressBar("progress-bar1", getAnimateValue(i*i*0.90, 92));
+                            setPercentageProgressBar("progress-bar2", getAnimateValue(i*i*0.25,35));
+                            setPercentageProgressBar("progress-bar3", getAnimateValue(i*i*0.34,80));
+                            setPercentageProgressBar("progress-bar4", getAnimateValue(i*i*0.24,20));
+                            setPercentageProgressBar("progress-bar5", getAnimateValue(i*i*0.54,60));
+                            setPercentageProgressBar("progress-bar6", getAnimateValue(i*i,42));
+
+                        }, 100 * i);
+                    }
+                    function setPercentageProgressBar(id, width) {
+                        for (let i = 0; i < width; i++){
+                            document.getElementById(id).style.width = i + "%";
+                        }
+                    }
+                    function getAnimateValue(currentValue, maxValue) {
+                        if (currentValue >= maxValue) {
+                            return maxValue;
+                        } else if (currentValue < maxValue){
+                            return currentValue;
+                        }
                     }
                 </script>
 </div></div>
