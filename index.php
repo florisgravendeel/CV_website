@@ -19,11 +19,12 @@ require 'core/init.php';
     <link rel="stylesheet" href="assets/css/navigation-bar.css">
     <link rel="stylesheet" href="assets/css/progress-bar.css">
     <link rel="stylesheet" href="assets/css/projectlist.css">
+
 </head>
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#"><img class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand"><img class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="height: 33px;text-align: left;">
                 <ul class="nav navbar-nav mx-auto navigation-bar">
@@ -101,12 +102,12 @@ require 'core/init.php';
                         .changeCursor(' ')
                         .start();
 
-                    for (let i=0; i<=1000; i++) {
+                    for (let i=0; i<=500; i++) {
                         animate(i);
                     }
                     function animate(i) {
                         setTimeout(function() {
-                            // Add tasks to do
+                            // Voeg taken toe!
                             setPercentageProgressBar("progress-bar1", getAnimateValue(i*i*0.90, 92));
                             setPercentageProgressBar("progress-bar2", getAnimateValue(i*i*0.25,35));
                             setPercentageProgressBar("progress-bar3", getAnimateValue(i*i*0.34,80));

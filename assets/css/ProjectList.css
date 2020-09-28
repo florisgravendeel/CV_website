@@ -28,6 +28,7 @@
 }
 
 .card-body:hover {
+  transition: .5s;
   border-color: gray;
 }
 
