@@ -90,7 +90,7 @@
         return re.test(email);
     }
     function getName(){
-        return document.getElementById("form-email").value;
+        return document.getElementById("form-name").value;
     }
     function getEmail(){
         return document.getElementById("form-email").value;

@@ -44,7 +44,9 @@ require 'core/init.php';
     <div class="jumbotron jumbotron-homepage">
         <div class="jumbotron-header">
             <h1 class="jumbotron-title" id="WelcomeText"><br></h1>
-            <p id="introtext" class="text-left jumbotron-body"> <br></p><img class="profilepicture" src="assets/img/profile.jpg"><img class="thisisme" src="assets/img/ditbenik.png">
+            <p id="introtext" class="text-left jumbotron-body"> <br></p><img class="profilepicture"
+            src="assets/img/profile.jpg"><img class="thisisme" src="assets/img/ditbenik.png">
+
             <h5
                 class="jumbotron-title2" style="font-size: 27px;">Mijn vaardigheden:</h5><div class="Block-langs">
 
