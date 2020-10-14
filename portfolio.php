@@ -41,17 +41,17 @@ require 'core/init.php';
         </div>
         </div>
     </nav>
-                <?php
-                if (isset($_GET["admin"])) {
-                    // Pak de variabel uit de url.
-                    $bool = $_GET["admin"];
-                    $string = strval($bool);
-                    if ($string == "true") {
-                        include "admintoolbar.php";
-                        echo '<script src="assets/js/admintoolbar.js" type="text/javaScript"></script>';
-                    }
-                }
-                ?>
+    <?php
+    if (isset($_GET["admin"])) {
+        // Pak de variabel uit de url.
+        $bool = $_GET["admin"];
+        $string = strval($bool);
+        if ($string == "true") {
+            include "admintoolbar.php";
+            echo '<script src="assets/js/admintoolbar.js" type="text/javaScript"></script>';
+        }
+    }
+    ?>
     <div class="jumbotron jumbotron-portfolio">
         <div class="container">
             <div class="portfolio-title">

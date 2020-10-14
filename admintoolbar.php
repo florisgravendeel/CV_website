@@ -26,7 +26,7 @@
 
 <body>
     <div id="admintoolbar"><a id="adminm0" class="adminmenu" href="contactlist.php?admin=true">Contacten</a>
-        <a id="adminm1" class="adminmenu" href="portfolio-admin.html">Projecten</a>
+        <a id="adminm1" class="adminmenu" href="portfolio-admin.php">Projecten</a>
         <a id="adminm2" class="adminmenu" onclick="logout()">Uitloggen&nbsp;</a>
         <img id="admin-logouticon" src="assets/img/logouticon.png" onclick="logout()"></div>
     <script
