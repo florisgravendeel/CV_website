@@ -1,0 +1,194 @@
+.form-group {
+  color: aliceblue;
+  text-align: start;
+}
+
+@media (max-width: 575.98px) {
+  #portfolio-add ::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0) !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .custom-file-label {
+    color: rgba(0, 0, 0, 0);
+  }
+}
+
+@media (min-width: 576px) {
+  .custom-file-label {
+    color: rgba(108,117,125);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .jumbotron-header-addportfolio {
+    color: aliceblue;
+    width: 300px;
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 720px;
+    width: 330px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (max-width: 575.98px) {
+  #formUploadProject4 {
+    margin-top: -20px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #sendButton2 {
+    margin-left: 66.2%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .jumbotron-header-addportfolio {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    height: 690px;
+    width: 490px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #sendButton2 {
+    margin-left: 78.7%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .jumbotron-header-addportfolio {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+    height: 690px;
+    width: 645px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #sendButton2 {
+    margin-left: 84.3%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .jumbotron-header-addportfolio {
+    background-color: rgba(0,0,0,0.45);
+    padding: 23px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+    height: 690px;
+    width: 80%;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #sendButton2 {
+    margin-left: 86.47%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron-header-addportfolio {
+    background-color: rgba(0,0,0,0.45);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 23px;
+    border-radius: 10px;
+    margin-top: -10px;
+    height: 690px;
+    width: 900px;
+    border-style: solid;
+    border-color: rgb(26,37,47);
+  }
+}
+
+@media (min-width: 1200px) {
+  #sendButton2 {
+    margin-left: 89.1%;
+  }
+}
+
+#sendButton2 {
+  color: white;
+  background-color: #48A9A6;
+  border-color: black;
+  margin-bottom: -60px;
+}
+
+#sendButton2:hover {
+  color: rgb(196, 196, 196);
+  background-color: #3C887E;
+  border-color: black;
+}
+
+#addportfolio-heading {
+  color: aliceblue;
+}
+
+@media (max-width: 575.98px) {
+  #addportfolio-heading {
+    font-size: 36px;
+    margin-top: -10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #addportfolio-heading {
+    font-size: 36px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #addportfolio-heading {
+    font-size: 36px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #addportfolio-heading {
+    font-size: 36px;
+    margin-top: -30px;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  #addportfolio-heading {
+    font-size: 36px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+

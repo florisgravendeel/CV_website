@@ -37,6 +37,23 @@
             return $query->fetchAll();
         }
 
+        public function verkrijg_bericht($id)
+        {
+            $query = $this->db->prepare(
+                "SELECT * 
+			  FROM contactlist 
+			  WHERE id = $id"
+            );
+                //$query->bindValue(1, $id);
+
+            try {
+                $query->execute();
+            } catch (PDOException $e) {
+                die($e->getMessage());
+            }
+            return $query->fetchAll();
+        }
+
         /*----------------------------------------------------
          * met deze functie krijgen we een overzicht
          * van het aantal berichten
@@ -78,16 +95,16 @@
         }
 
         /*----------------------------------------------------
-         * met deze functie kunnen we een project verwijderen
+         * met deze functie kunnen we een contact verwijderen
          -----------------------------------------------------*/
-        public function verwijderen_project($email)
+        public function verwijder_contact($id)
         {
             $query = $this->db->prepare(
-                "DELETE FROM contact
-		  WHERE email = ?"
+                "DELETE FROM contactlist
+		  WHERE id = ?"
             );
 
-            $query->bindValue(1, $email);
+            $query->bindValue(1, $id);
 
             try {
                 $query->execute();

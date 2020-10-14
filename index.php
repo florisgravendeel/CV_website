@@ -24,7 +24,7 @@ require 'core/init.php';
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand"><img class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand"><img id="logoLink" class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="height: 33px;text-align: left;">
                 <ul class="nav navbar-nav mx-auto navigation-bar">
@@ -40,6 +40,16 @@ require 'core/init.php';
     if (!empty($profile)){
         $profileinfo = $profile->profileinfo();
     }
+    if (isset($_GET["admin"])) {
+        // Pak de variabel uit de url.
+        $bool = $_GET["admin"];
+        $string = strval($bool);
+        if ($string == "true"){
+            include "admintoolbar.php";
+            echo '<script src="assets/js/admintoolbar.js" type="text/JavaScript"></script>'
+            ;
+        }
+    }
     ?>
     <div class="jumbotron jumbotron-homepage">
         <div class="jumbotron-header">
@@ -50,11 +60,6 @@ require 'core/init.php';
             <h5
                 class="jumbotron-title2" style="font-size: 27px;">Mijn vaardigheden:</h5><div class="Block-langs">
 
-                <script type="text/javascript">
-                    var profileinfoQuery = <?php echo json_encode($profileinfo, JSON_PRETTY_PRINT) ?>;
-                    var profielinformatie = profileinfoQuery[0]["profileinfo"];
-                    document.getElementById("introtext").innerHTML = profielinformatie;
-                </script>
     <div class="container">
         <div class="row">
             <div class="col-md-6 column-lang">
@@ -95,43 +100,12 @@ require 'core/init.php';
             </div>
         </div>
     </div>
-                <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-                <script type="text/javascript">
-                    const typewriter1 = new Typewriter('#WelcomeText');
-
-                    typewriter1.typeString('Welkom!')
-                        .pauseFor(4500)
-                        .changeCursor(' ')
-                        .start();
-
-                    for (let i=0; i<=500; i++) {
-                        animate(i);
-                    }
-                    function animate(i) {
-                        setTimeout(function() {
-                            // Voeg taken toe!
-                            setPercentageProgressBar("progress-bar1", getAnimateValue(i*i*0.90, 92));
-                            setPercentageProgressBar("progress-bar2", getAnimateValue(i*i*0.25,35));
-                            setPercentageProgressBar("progress-bar3", getAnimateValue(i*i*0.34,80));
-                            setPercentageProgressBar("progress-bar4", getAnimateValue(i*i*0.24,20));
-                            setPercentageProgressBar("progress-bar5", getAnimateValue(i*i*0.54,60));
-                            setPercentageProgressBar("progress-bar6", getAnimateValue(i*i,42));
-
-                        }, 100 * i);
-                    }
-                    function setPercentageProgressBar(id, width) {
-                        for (let i = 0; i < width; i++){
-                            document.getElementById(id).style.width = i + "%";
-                        }
-                    }
-                    function getAnimateValue(currentValue, maxValue) {
-                        if (currentValue >= maxValue) {
-                            return maxValue;
-                        } else if (currentValue < maxValue){
-                            return currentValue;
-                        }
-                    }
-                </script>
+    <script type="text/javascript">
+         var profileinfoQuery = <?php echo json_encode($profileinfo, JSON_PRETTY_PRINT) ?>;
+    </script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="assets/js/homepage.js" type="text/javascript"></script>
+    <script src="assets/js/login.js" type="text/javascript"></script>
 </div></div>
     </div>
     <div class="footer-basic">
@@ -146,5 +120,4 @@ require 'core/init.php';
     <script src="assets/js/--mp--Animated-progress-bar-in-viewport-1.js"></script>
     <script src="assets/js/--mp--Animated-progress-bar-in-viewport.js"></script>
 </body>
-
 </html>

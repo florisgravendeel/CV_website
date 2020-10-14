@@ -1,0 +1,55 @@
+.login-one-form {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  max-width: 350px;
+  width: 350px;
+  left: 50%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+}
+
+.login-one {
+  background-color: rgba(0,0,0,0.1);
+  background: url(../../assets/img/background5.png);
+  min-height: 100%;
+  height: 1240px;
+  background-size: cover;
+  background-position: center;
+}
+
+#projectAlertBlue {
+  margin-bottom: 35px;
+}
+
+.login-one-ico {
+  padding: 30px;
+  font-size: 50px;
+  text-align: center;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.login-input {
+  margin: 10px;
+  margin-left: 0px;
+}
+
+#loginicon {
+  width: 200px;
+}
+
+#button {
+  width: 100%;
+  margin: 10px;
+  margin-left: 0px;
+}
+
+#heading {
+  padding-bottom: 10px;
+}
+

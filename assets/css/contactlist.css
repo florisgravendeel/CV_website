@@ -1,0 +1,308 @@
+.contactlist-thsort, #contactlist-emailtext {
+  color: aliceblue;
+}
+
+.contactlist-tdname {
+  color: aliceblue;
+  width: 33%;
+}
+
+#contactlist-emailtext {
+  height: 330px;
+  overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  .contactlist-tddate {
+    width: 13%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .contactlist-tddate {
+    color: aliceblue;
+    width: 16%;
+  }
+}
+
+.contactlist-windowtext {
+  color: aliceblue;
+}
+
+@media (min-width: 1200px) {
+  .contactlist-windowtext {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #contactlist-emailtext {
+    font-size: 18px;
+    height: 372px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #contactlist-button1 {
+    position: absolute;
+    margin-right: -100px;
+    margin-top: -3px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #contactlist-button2 {
+    position: absolute;
+    margin-left: 745px;
+    margin-top: -3px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contactlist-windowtext {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .contactlist-windowtext {
+    font-size: 21px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #contactlist-emailtext {
+    font-size: 17.5px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #contactlist-emailtext {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contactlist-tdname {
+    width: 160px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #contactlist-button1 {
+    position: absolute;
+    margin-right: -100px;
+    margin-top: 2px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #contactlist-button2 {
+    position: absolute;
+    margin-left: 575px;
+    margin-top: 2px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #contactlist-emailtext {
+    height: 410px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #contactlist-button1 {
+    position: absolute;
+    margin-right: -100px;
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #contactlist-button2 {
+    position: absolute;
+    margin-left: 170px;
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #contactlist-button1 {
+    position: absolute;
+    margin-right: -100px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #contactlist-button2 {
+    position: absolute;
+    margin-left: 480px;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #contactlist-button1 {
+    position: absolute;
+    margin-right: -80px;
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #contactlist-button2 {
+    position: absolute;
+    margin-left: 360px;
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #contactlist-themail {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #contactlist-thmessage {
+    display: none;
+  }
+}
+
+.contactlist-tdemail {
+  color: aliceblue;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #contactlist-thmessage, .contactlist-tdmessage {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .contactlist-tdemail {
+    width: 160px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .contactlist-tddate {
+    width: 190px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .contactlist-tdmessage, #contactlist-thmessage {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contactlist-tdemail {
+    display: none;
+  }
+}
+
+.contactlist-tdate {
+  color: aliceblue;
+}
+
+@media (max-width: 575.98px) {
+  .contactlist-tdate {
+    width: 370px;
+  }
+}
+
+.contactlist-tdmessage {
+  color: aliceblue;
+}
+
+@media (max-width: 575.98px) {
+  .contactlist-tdmessage {
+    display: none;
+  }
+}
+
+.contactlist-tddate {
+  color: aliceblue;
+}
+
+#contactlist-heading {
+  color: aliceblue;
+}
+
+@media (max-width: 575.98px) {
+  #contactlist-heading {
+    font-size: 36px;
+    margin-top: -10px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #contactlist-heading {
+    font-size: 36px;
+    margin-top: -40px;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #contactlist-heading {
+    font-size: 36px;
+    margin-top: -50px;
+    margin-bottom: 58px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #contactlist-heading {
+    font-size: 36px;
+    margin-top: -40px;
+    margin-bottom: 58px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #contactlist-heading {
+    font-size: 36px;
+    margin-top: -45px;
+    margin-bottom: 43px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  #contactlist-heading {
+    font-size: 36px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+#contaclist-table {
+  border-collapse: collapse;
+  overflow-wrap: break-word;
+}
+
+#contaclist-table td, #contaclist-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#contaclist-table tr:hover {
+  background-color: grey;
+}
+
+#contaclist-table th {
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: black;
+  color: white;
+}
+

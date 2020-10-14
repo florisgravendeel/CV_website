@@ -1,0 +1,96 @@
+.portfolio-title {
+  text-align: center;
+  color: aliceblue;
+}
+
+.card-body {
+  width: 270px;
+  height: 350px;
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(26,37,47);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 150px, 150px;
+  background-position: center;
+  color: aliceblue;
+  position: relative;
+}
+
+#card-body1 {
+  background-image: url("../../assets/img/server-icon.png");
+}
+
+.card-body:hover {
+  transition: .5s;
+  border-color: gray;
+}
+
+.card-body::after {
+  content: "";
+  background: rgba(0,0,0,0.80);
+  opacity: 0.77;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-radius: 7px;
+  border-color: rgba(255, 0, 0, 0);
+  position: absolute;
+  z-index: -1;
+}
+
+.card-button {
+  color: white;
+  margin-top: 30px;
+  margin-left: 0px;
+  background-color: #48A9A6;
+  border-color: black;
+}
+
+.card-button:hover {
+  color: rgb(196, 196, 196);
+  background-color: #3C887E;
+  border-color: black;
+}
+
+.card-title {
+  font-size: 30px;
+  height: 75px;
+}
+
+.card-date {
+  font-style: italic;
+  font-size: 17px;
+}
+
+.card-description {
+  font-size: 17px;
+}
+
+.card-madewith {
+  text-align: end;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 35px;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+  background-color: #3C887E;
+  border-color: black;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  background-color: #3C887E;
+  border-color: black;
+  box-shadow: 0 0 0 .2rem rgba(0, 0, 0, 0.5);
+}
+
