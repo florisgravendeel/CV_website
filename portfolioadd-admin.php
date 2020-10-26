@@ -1,5 +1,8 @@
+<?php
+require 'core/init.php';
+?>
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 
 <head>
     <meta charset="utf-8">
@@ -26,34 +29,49 @@
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#"><img class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand"><img id="logoLink" class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="height: 33px;text-align: left;">
                 <ul class="nav navbar-nav mx-auto navigation-bar">
-                    <li class="nav-item"><a class="nav-link active navigation-links" href="index.html">Homepagina</a></li>
-                    <li class="nav-item"><a class="nav-link active navigation-links" href="portfolio.html">Portfolio</a></li>
-                    <li class="nav-item"><a class="nav-link active navigation-links" href="#">CV</a></li>
-                    <li class="nav-item"><a class="nav-link active navigation-links" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active navigation-links" href="index.php">Homepagina</a></li>
+                    <li class="nav-item"><a class="nav-link active navigation-links" href="portfolio.php">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link active navigation-links" target="_blank" href="pdfview.php?file=CV.pdf">CV</a></li>
+                    <li class="nav-item"><a class="nav-link active navigation-links" href="contact.php">Contact</a></li>
                 </ul>
         </div>
         </div>
     </nav>
+    <?php
+    if (isset($_GET["admin"])) {
+        // Pak de variabel uit de url.
+        $bool = $_GET["admin"];
+        $string = strval($bool);
+        if ($string == "true") {
+            include "admintoolbar.php";
+            echo '<script src="assets/js/admintoolbar.js" type="text/javaScript"></script>';
+        } else {
+            header("Location: login.php");
+        }
+    }
+    ?>
     <div class="jumbotron jumbotron-contactlist">
-        <h1 id="addportfolio-heading">Project toevoegen</h1><div id="projectAlertBlue" class="alert alert-primary alert-dismissible fade show" role="alert">
-    Je project <strong>Iceball</strong> is bijgewerkt!
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+        <h1 id="addportfolio-heading">Project toevoegen</h1>
+        <div hidden id="projectAlertBlue" class="alert alert-primary alert-dismissible fade show" role="alert">
+            Je project <strong>Iceball</strong> is bijgewerkt!
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+
         <div class="jumbotron-header-addportfolio"><div id="portfolio-add">
-<form>
+<form id="portfolioForm">
   <div class="form-group">
     <label for="formUploadProject1">Projectnaam:</label>
-    <input type="text" class="form-control is-valid" id="formUploadProject1" placeholder="Voer hier de naam van het project in!">
+    <input type="text" class="form-control" id="formUploadProject1" name="projectname" placeholder="Voer hier de naam van het project in!">
   </div>
   <div class="form-group">
     <label for="formUploadProject2">Projectbeschrijving (kort):</label>
-    <input type="text" class="form-control is-invalid" id="formUploadProject2" placeholder="Beschrijf hier in het kort je project!">
+    <input type="text" class="form-control" id="formUploadProject2" name="description_short" placeholder="Beschrijf hier in het kort je project!">
   </div>
   <div class="form-group">
     <label for="formUploadProject3">Projectbeschrijving (lang):</label>
@@ -71,15 +89,12 @@
     <label for="formUploadProject6">Projectlink:</label>
     <input type="url" class="form-control" id="formUploadProject6" placeholder="Link naar je project! Voorbeeld: https://github.com/steve/project1">
   </div>
-  <div>
-    <label class="form-group" for="formUploadProject7">Logo:</label>
-    <div class="custom-file"> 
-    <input type="file" class="custom-file-input" id="formUploadProject8" required>
-    <label class="custom-file-label" for="formUploadProject8">Upload het logo van je project!</label>
+    <div class="form-group">
+        <label for="formUploadProject7">Link naar je logo:</label>
+        <input type="url" class="form-control" id="formUploadProject7" placeholder="Link naar je logo! Voorbeeld: https://freeimage.host/i/tty.2ysPGp">
     </div>
-  </div>
+    <button class="btn btn-primary" id="sendButton2" onclick="sendProjectForm()">VERZEND</button>
 </form>
-    <button class="btn btn-primary" id="sendButton2" type="submit">VERZEND</button>
 </div>
 </div>
     </div>
@@ -94,6 +109,16 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/--mp--Animated-progress-bar-in-viewport-1.js"></script>
     <script src="assets/js/--mp--Animated-progress-bar-in-viewport.js"></script>
+    <script src="assets/js/portfolio-add-admin.js"></script>
+    <script src="assets/js/login.js" type="text/javascript"></script>
 </body>
-
 </html>
+<!---
+  <div>
+    <label class="form-group" for="formUploadProject7">Logo:</label>
+    <div class="custom-file">
+    <input type="file" class="custom-file-input" name="image" id="formUploadProject8">
+    <label class="custom-file-label" for="formUploadProject8">Upload het logo van je project!</label>
+    </div>
+  </div>
+-->

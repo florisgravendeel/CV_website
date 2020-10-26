@@ -49,6 +49,8 @@ require 'core/init.php';
         if ($string == "true") {
             include "admintoolbar.php";
             echo '<script src="assets/js/admintoolbar.js" type="text/javaScript"></script>';
+        } else {
+            header("Location: login.php");
         }
     }
     ?>

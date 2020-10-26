@@ -28,7 +28,7 @@ require 'core/init.php';
 </head>
 <body>
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#"><img class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand"><img id="logoLink" class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="height: 33px;text-align: left;">
                 <ul class="nav navbar-nav mx-auto navigation-bar">
@@ -98,6 +98,7 @@ if (isset($_GET["admin"])) {
     <script src="assets/js/--mp--Animated-progress-bar-in-viewport-1.js"></script>
     <script src="assets/js/--mp--Animated-progress-bar-in-viewport.js"></script>
     <script src="assets/js/contactlist.js" type="text/javascript"></script>
+    <script src="assets/js/login.js" type="text/javascript"></script>
 </body>
 
 </html>

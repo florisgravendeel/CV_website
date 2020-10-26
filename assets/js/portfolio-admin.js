@@ -5,7 +5,8 @@ for (i = 0; i < (aantalProjecten); i++){
         titel: titel[i],
         korte_beschrijving: kort_beschrijving[i],
         datum: date.getDate() + "/" + (date.getMonth()+1) + "/" + date.getFullYear(),
-        afbeelding: afbeelding[i]
+        afbeelding: afbeelding[i],
+        id: id[i]
     };
     projecten.push(project);
 }
@@ -23,15 +24,17 @@ function bouwProjectLijst() {
                             <p class="card-date">${huidigProject.datum}</p>
                             <p class="card-description">${huidigProject.korte_beschrijving}<br></p>
                             <img class="card-edit-icon" src="assets/img/edit-icon.png">
-                            <img class="card-delete-icon" src="assets/img/delete-icon.png">
+                            <img class="card-delete-icon" src="assets/img/delete-icon.png" onclick="deleteProject(${huidigProject.id})" data-toggle="modal" data-target="#deleteProjectModal">
                             </div>
                         </div>
                                 `
         );
     });
-    output.push(
-
-    )
+    output.push(`
+                        <div class="col-md-6 col-lg-4">
+                    <div class="card-body"><img id="card-add-icon" src="assets/img/add-icon.png" onclick="gotoPortfolioAdd()"></div>
+                        </div>
+    `)
     // Combineer de output in 1 string van HTML en laat het zien op de pagina
     projectContainer.innerHTML = output.join("");
 }
@@ -44,12 +47,22 @@ function styleProjectLijst() {
 
     }
 }
-function configureModal(projectNumber) {
-    document.getElementById("projectModalLabel").innerHTML = projecten[projectNumber].titel;
-    document.getElementById("modal-body-text").innerHTML = projecten[projectNumber].lange_beschrijving;
-    document.getElementById("btn-modal").onclick = function() {
-        window.open(projecten[projectNumber].link);
-    };
+function gotoPortfolioAdd(){
+    window.location.href = "portfolioadd-admin.php?admin=true";
+}
+function deleteProject(id){
+     projectName = findProjectNameById(id);
+     document.getElementById("modal-body-text1").innerText = "Weet je zeker dat je '" + projectName + "' wilt verwijderen?";
+     document.getElementById("deleteProjectButton1").onclick =  function() {
+         parent.location = "portfoliodelete-admin.php?admin=true&projectid=" + id;
+     }
+}
+function findProjectNameById(id){
+    for (i = 0; i < projecten.length; i++){
+        if (projecten[i].id == id){
+            return projecten[i].titel;
+        }
+    }
 }
 const projectContainer = document.getElementById("projectsContainer");
 bouwProjectLijst();

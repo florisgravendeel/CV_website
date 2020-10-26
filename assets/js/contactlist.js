@@ -2,7 +2,7 @@
 
 
 function readLetter(id) {
-    window.location.href = "contactlist_view.php?projectid=" + id;
+    window.location.href = "contactlist_view.php?admin=true&projectid=" + id;
 }
 function addRowHandlers() {
     var table = document.getElementById("contaclist-table");

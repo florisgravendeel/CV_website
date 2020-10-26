@@ -7,7 +7,7 @@ require 'core/init.php';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Floris CV Website</title>
+    <title>Portfolio (admin)</title>
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
@@ -29,7 +29,7 @@ require 'core/init.php';
 
 <body>
     <nav class="navbar navbar-light navbar-expand-md">
-        <div class="container-fluid"><a class="navbar-brand" href="#"><img id="logoLink" class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand"><img id="logoLink" class="logo" src="assets/img/florisgravendeellogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1" style="height: 33px;text-align: left;">
                 <ul class="nav navbar-nav mx-auto navigation-bar">
@@ -49,6 +49,8 @@ require 'core/init.php';
         if ($string == "true") {
             include "admintoolbar.php";
             echo '<script src="assets/js/admintoolbar.js" type="text/javaScript"></script>';
+        } else {
+            header("Location: login.php");
         }
     }
     ?>
@@ -71,11 +73,13 @@ require 'core/init.php';
         $datum = array();
         $afbeelding = array();
         $programmeertaal = array();
+        $id = array();
         foreach($projecten as $project){
             array_push($titel,$project['title']);
             array_push($kort_beschrijving,$project['short_description']);
             array_push($datum,$project['date']);
             array_push($afbeelding,$project['img']);
+            array_push($id,$project['id']);
         }
         ?>
 
@@ -129,10 +133,7 @@ require 'core/init.php';
             <p
                 class="copyright">Floris Gravendeel © 2020</p>
         </footer>
-    </div><!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteProjectModal">
-  Launch demo modal2
-</button>
+    </div>
 
 <!-- Modal -->
 <div class="modal fade" id="deleteProjectModal" tabindex="-1" role="dialog" aria-labelledby="deleteProjectModalTitle" aria-hidden="true">
@@ -144,12 +145,12 @@ require 'core/init.php';
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        Weet je zeker dat je Iceball wilt verwijderen?
+      <div class="modal-body" id="modal-body-text1">
+
       </div>
       <div class="modal-footer" id="deleteProjectModalFooter">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">SLUIT</button>
-        <button type="button" class="btn btn-danger">VERWIJDER</button>
+        <button type="button" class="btn btn-danger" id="deleteProjectButton1">VERWIJDER</button>
       </div>
     </div>
   </div>
@@ -164,6 +165,7 @@ require 'core/init.php';
         var kort_beschrijving = <?php echo json_encode($kort_beschrijving); ?>;
         var datum = <?php echo json_encode($datum); ?>;
         var afbeelding = <?php echo json_encode($afbeelding); ?>;
+        var id = <?php echo json_encode($id); ?>
 
     </script>
     <script src="assets/js/login.js" type="text/javascript"></script>

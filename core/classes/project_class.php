@@ -118,7 +118,7 @@
         /*----------------------------------------------------
          * met deze functie kunnen we een project verwijderen
          -----------------------------------------------------*/
-        public function verwijderen_project($id)
+        public function verwijder_project($id)
         {
             $query = $this->db->prepare(
                 "DELETE FROM projects
