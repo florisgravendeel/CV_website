@@ -1,4 +1,4 @@
-# CV_website
+# CV website
 Website for CV
 
 Hoe installeer je deze website?

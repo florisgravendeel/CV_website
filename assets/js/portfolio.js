@@ -1,5 +1,5 @@
 var projecten = [];
-for (i = 0; i < (aantalProjecten); i++){
+for (i = 0; i < aantalProjecten; i++){
     var date = new Date(datum[i]);
     var project = {
         titel: titel[i],

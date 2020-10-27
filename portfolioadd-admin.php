@@ -2,7 +2,7 @@
 require 'core/init.php';
 ?>
 <!DOCTYPE html>
-<html lang="nl">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -58,20 +58,19 @@ require 'core/init.php';
         <h1 id="addportfolio-heading">Project toevoegen</h1>
         <div hidden id="projectAlertBlue" class="alert alert-primary alert-dismissible fade show" role="alert">
             Je project <strong>Iceball</strong> is bijgewerkt!
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
         <div class="jumbotron-header-addportfolio"><div id="portfolio-add">
-<form id="portfolioForm">
+<form>
   <div class="form-group">
     <label for="formUploadProject1">Projectnaam:</label>
-    <input type="text" class="form-control" id="formUploadProject1" name="projectname" placeholder="Voer hier de naam van het project in!">
+    <input type="text" class="form-control is-valid" id="formUploadProject1" placeholder="Voer hier de naam van het project in!">
   </div>
   <div class="form-group">
     <label for="formUploadProject2">Projectbeschrijving (kort):</label>
-    <input type="text" class="form-control" id="formUploadProject2" name="description_short" placeholder="Beschrijf hier in het kort je project!">
+    <input type="text" class="form-control is-invalid" id="formUploadProject2" placeholder="Beschrijf hier in het kort je project!">
   </div>
   <div class="form-group">
     <label for="formUploadProject3">Projectbeschrijving (lang):</label>
@@ -89,12 +88,15 @@ require 'core/init.php';
     <label for="formUploadProject6">Projectlink:</label>
     <input type="url" class="form-control" id="formUploadProject6" placeholder="Link naar je project! Voorbeeld: https://github.com/steve/project1">
   </div>
-    <div class="form-group">
-        <label for="formUploadProject7">Link naar je logo:</label>
-        <input type="url" class="form-control" id="formUploadProject7" placeholder="Link naar je logo! Voorbeeld: https://freeimage.host/i/tty.2ysPGp">
+  <div>
+    <label class="form-group" for="formUploadProject7">Logo:</label>
+    <div class="custom-file"> 
+    <input type="file" class="custom-file-input" id="formUploadProject8" required>
+    <label class="custom-file-label" for="formUploadProject8">Upload het logo van je project!</label>
     </div>
-    <button class="btn btn-primary" id="sendButton2" onclick="sendProjectForm()">VERZEND</button>
+  </div>
 </form>
+    <button class="btn btn-primary" id="sendButton2" type="submit">VERZEND</button>
 </div>
 </div>
     </div>
@@ -112,13 +114,5 @@ require 'core/init.php';
     <script src="assets/js/portfolio-add-admin.js"></script>
     <script src="assets/js/login.js" type="text/javascript"></script>
 </body>
+
 </html>
-<!---
-  <div>
-    <label class="form-group" for="formUploadProject7">Logo:</label>
-    <div class="custom-file">
-    <input type="file" class="custom-file-input" name="image" id="formUploadProject8">
-    <label class="custom-file-label" for="formUploadProject8">Upload het logo van je project!</label>
-    </div>
-  </div>
--->

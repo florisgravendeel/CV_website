@@ -90,6 +90,7 @@ require 'core/init.php';
                 </div>
             </div>
         </div>
+</body>
     <?php // Download de projecten van de database
 
     if (!empty($project)) {
@@ -114,10 +115,6 @@ require 'core/init.php';
         array_push($link,$project['link']);
     }
     ?>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/--mp--Animated-progress-bar-in-viewport-1.js"></script>
-    <script src="assets/js/--mp--Animated-progress-bar-in-viewport.js"></script>
     <script> //Alle data van PHP naar Javascript omzetten.
         var aantalProjecten = <?php echo json_encode($aantal_projecten); ?>;
         var titel = <?php echo json_encode($titel); ?>;
@@ -128,8 +125,10 @@ require 'core/init.php';
         var programmeertaal = <?php echo json_encode($programmeertaal); ?>;
         var link = <?php echo json_encode($link); ?>;
     </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/--mp--Animated-progress-bar-in-viewport-1.js"></script>
+    <script src="assets/js/--mp--Animated-progress-bar-in-viewport.js"></script>
     <script src="assets/js/login.js" type="text/javascript"></script>
     <script src="assets/js/portfolio.js" type="text/javascript"></script>
-</body>
-
 </html>
